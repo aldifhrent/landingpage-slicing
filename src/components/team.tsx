@@ -68,7 +68,7 @@ interface TeamCardProps {
 
 function TeamCard({ image, name, role, description, rate }: TeamCardProps) {
   return (
-    <div className="bg-[#FFFFFF] py-[40px] px-[30px]  max-w-[370px] rounded-[20px]">
+    <div className="bg-[#FFFFFF] py-[40px] px-[30px]  max-w-[370px] rounded-[20px] shadow-lg">
       <div className="flex flex-col items-center justify-center">
         <Image src={image} alt="" width={56} height={56} />
         <h1 className="text-[21px] font-semibold leading-[130%] mt-4">

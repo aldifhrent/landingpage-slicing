@@ -40,7 +40,11 @@ export default function Features() {
               ease: "easeIn", // Tipe easing untuk animasi
             }}
           >
-            <Image src={Visual} alt="Feature Visual" className="" />
+            <Image
+              src={Visual}
+              alt="Feature Visual"
+              className="max-w-none mx-auto"
+            />
           </motion.div>
           <div className="w-full">
             <h1 className="text-[28px] md:text-[38px] leading-[130%] font-bold tracking-tight text-center xl:text-start mb-4">

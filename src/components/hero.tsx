@@ -33,7 +33,7 @@ export default function Hero() {
             Page UI kit for Figma. No code required!
           </motion.p>
           <motion.div
-            className="flex flex-col md:flex-row mt-10 items-center mx-auto gap-[18px] justify-center xl:justify-normal "
+            className="flex flex-col lg:flex-row mt-10 items-center  gap-[18px] justify-center "
             initial={{ x: -100, opacity: 0 }} // Mulai dari luar layar di sebelah kiri dengan opasitas 0
             animate={{ x: 0, opacity: 1 }} // Bergerak ke posisi semula dengan opasitas 1
             transition={{

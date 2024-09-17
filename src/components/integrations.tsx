@@ -41,7 +41,13 @@ export default function Integrations() {
           <div className="flex items-center justify-center gap-[15px] lg:gap-[76px]">
             {icons.firstColumn.map((item, index) => (
               <div key={index} className="flex justify-center items-center">
-                <Image src={item.src} alt={item.name} width={50} height={50} />
+                <Image
+                  src={item.src}
+                  alt={item.name}
+                  width={50}
+                  height={50}
+                  className=""
+                />
               </div>
             ))}
           </div>
