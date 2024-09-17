@@ -5,7 +5,7 @@ import Image from "next/image";
 import UfoIcon from "@/assets/Ufo.png";
 import ResponsiveIcon from "@/assets/icons/Responsive.png";
 import MagicIcon from "@/assets/icons/Magic.png";
-import BoxIcon from "@/assets/icons/box.png";
+import BoxIcon from "@/assets/icons/Box.png";
 import { motion } from "framer-motion";
 const featuresCard = [
   {
