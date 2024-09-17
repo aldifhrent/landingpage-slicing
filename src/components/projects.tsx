@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Projects() {
   return (
     <section className="bg-neutral-zicon py-16">
-      <div className="container mx-auto px-4 lg:px-[55px] py-5 lg:py-[120px]">
+      <div className="container mx-auto px-4 lg:px-[55px] py-5 xl:py-[120px]">
         <div className="flex flex-col items-center ">
           <h1 className="hidden lg:block text-3xl md:text-[38px] font-bold leading-[130%] tracking-[-2%]">
             Discover our latest work

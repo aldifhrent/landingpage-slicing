@@ -4,13 +4,13 @@ import CTAImage from "@/assets/CTA.png";
 
 export default function HighlightCTA() {
   return (
-    <section className="relative bg-sweet-corn">
-      <div className="container px-[50px] pt-[60px] pb-0">
+    <section className="bg-sweet-corn">
+      <div className="container mx-auto px-[50px] pt-[60px] pb-0">
         <div className="flex flex-col items-center justify-center relative z-10">
           <h1 className="text-[50px] leading-[130%] font-bold max-w-xl text-center">
             Get Landing Page UI Kit Today!
           </h1>
-          <p className="text-[21px] leading-[150%] mt-5">
+          <p className="text-[21px] leading-[150%] mt-5 text-center xl:text-start">
             Break Figma limits and explore the endless possibilities with Anima.
           </p>
           <div className="mt-10">

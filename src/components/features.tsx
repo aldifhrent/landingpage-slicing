@@ -1,10 +1,12 @@
+"use client";
+
 import Visual from "@/assets/Visuals.png";
 import Image from "next/image";
 import UfoIcon from "@/assets/Ufo.png";
 import ResponsiveIcon from "@/assets/icons/Responsive.png";
 import MagicIcon from "@/assets/icons/Magic.png";
 import BoxIcon from "@/assets/icons/box.png";
-
+import { motion } from "framer-motion";
 const featuresCard = [
   {
     icon: UfoIcon,
@@ -26,21 +28,25 @@ const featuresCard = [
 
 export default function Features() {
   return (
-    <section className="bg-neutral-zicon py-[60px] md:py-[120px]">
+    <section className="bg-neutral-zicon py-[100px]">
       <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-[30px] md:gap-[60px]">
-          <div className="w-full lg:w-1/2 mt-[60px] md:mt-0">
-            <Image
-              src={Visual}
-              alt="Feature Visual"
-              className="w-full h-auto"
-            />
-          </div>
-          <div className="w-full lg:w-1/2">
-            <h1 className="text-[28px] md:text-[38px] leading-[130%] font-bold tracking-tight text-center lg:text-start mb-4">
+        <div className="flex flex-col-reverse items-center xl:flex-row   gap-y-[30px] xl:gap-[60px]">
+          <motion.div
+            className="w-full lg:w-1/2 mt-[60px] md:mt-0"
+            initial={{ x: 0, opacity: 0 }} // Mulai dari luar layar di sebelah kiri dengan opasitas 0
+            animate={{ x: 0, opacity: 1 }} // Bergerak ke posisi semula dengan opasitas 1
+            transition={{
+              duration: 0.5, // Durasi animasi dalam detik
+              ease: "easeIn", // Tipe easing untuk animasi
+            }}
+          >
+            <Image src={Visual} alt="Feature Visual" className="" />
+          </motion.div>
+          <div className="w-full">
+            <h1 className="text-[28px] md:text-[38px] leading-[130%] font-bold tracking-tight text-center xl:text-start mb-4">
               Our features
             </h1>
-            <p className="text-[16px] md:text-[21px] text-center lg:text-start tracking-wide mb-8">
+            <p className="text-[16px] md:text-[21px] text-center xl:text-start tracking-wide mb-8">
               Few good reasons why you should use Anima Landing Page UI Kit to
               make your own pages.
             </p>
@@ -67,10 +73,12 @@ interface FeaturesCardProps {
 
 function FeaturesCard({ icon, title }: FeaturesCardProps) {
   return (
-    <div className="bg-white rounded-[20px] shadow-md hover:shadow-lg transition-shadow duration-300">
+    <div className="bg-white rounded-[20px] shadow-md hover:shadow-lg transition-shadow duration-300 w-auto">
       <div className="flex items-center p-4 gap-x-4 w-fit">
         <Image src={icon} alt={`${title} icon`} width={40} height={40} />
-        <h3 className="text-[18px] md:text-[24px] leading-[150%]">{title}</h3>
+        <h3 className="text-[18px] md:text-[24px] leading-[150%] text-nowrap w-fit">
+          {title}
+        </h3>
       </div>
     </div>
   );
