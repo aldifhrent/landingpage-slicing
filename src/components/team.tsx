@@ -1,8 +1,10 @@
+"use client";
+
 import team1 from "@/assets/team-1.png";
 import team2 from "@/assets/team-2.png";
 import team3 from "@/assets/team-3.png";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 export default function Team() {
   return (
     <section className="bg-neutral-zicon">
@@ -16,14 +18,33 @@ export default function Team() {
             that drive us.
           </p>
           <div className="flex flex-col lg:flex-row gap-[30px] mt-[60px]">
-            {TeamData.map((team) => (
-              <TeamCard
-                image={team.image.src}
-                name={team.name}
-                role={team.role}
-                description={team.description}
-                key={team.name}
-              />
+            {TeamData.map((team, index) => (
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  y: 24,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  delay: index * 0.5,
+                  ease: "easeInOut",
+                }}
+              >
+                <TeamCard
+                  image={team.image.src}
+                  name={team.name}
+                  role={team.role}
+                  description={team.description}
+                  key={team.name}
+                />
+              </motion.div>
             ))}
           </div>
         </div>
