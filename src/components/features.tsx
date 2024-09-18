@@ -33,11 +33,11 @@ export default function Features() {
         <div className="flex flex-col-reverse items-center xl:flex-row   gap-y-[30px] xl:gap-[60px]">
           <motion.div
             className="w-full lg:w-1/2 mt-[60px] md:mt-0"
-            initial={{ x: 0, opacity: 0 }} // Mulai dari luar layar di sebelah kiri dengan opasitas 0
+            initial={{ x: -100, opacity: 0 }} // Mulai dari luar layar di sebelah kiri dengan opasitas 0
             animate={{ x: 0, opacity: 1 }} // Bergerak ke posisi semula dengan opasitas 1
             transition={{
               duration: 0.5, // Durasi animasi dalam detik
-              ease: "easeIn", // Tipe easing untuk animasi
+              ease: "easeInOut", // Tipe easing untuk animasi
             }}
           >
             <Image
@@ -46,7 +46,15 @@ export default function Features() {
               className="max-w-none mx-auto"
             />
           </motion.div>
-          <div className="w-full">
+          <motion.div
+            className="w-full"
+            initial={{ x: 100, opacity: 0 }} // Mulai dari luar layar di sebelah kiri dengan opasitas 0
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 0.5, // Durasi animasi dalam detik
+              ease: "easeInOut", // Tipe easing untuk animasi
+            }}
+          >
             <h1 className="text-[28px] md:text-[38px] leading-[130%] font-bold tracking-tight text-center xl:text-start mb-4">
               Our features
             </h1>
@@ -63,7 +71,7 @@ export default function Features() {
                 />
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
